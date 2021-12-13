@@ -31,7 +31,7 @@ export const createGame = (db, text, date) => {
   });
 };
 
-export const deleteGame = (id) => {
+export const deleteGame = (db, id) => {
   return new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
